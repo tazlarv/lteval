@@ -1,0 +1,35 @@
+WorldBegin
+	MakeNamedMaterial "Light" "string type" ["matte"] "rgb Kd" [0 0 0]
+	AttributeBegin
+		AreaLightSource "diffuse" "rgb L" [30, 30, 30]
+		NamedMaterial "Light"
+		Shape "plymesh" "string filename" "../meshes/AreaLight.ply"
+	AttributeEnd
+
+	MakeNamedMaterial "WallWhite" "string type" ["matte"] "rgb Kd" [1, 1, 1]
+	MakeNamedMaterial "WallRed" "string type" ["matte"] "rgb Kd" [0.529, 0.024, 0.024]
+	MakeNamedMaterial "WallGreen" "string type" ["matte"] "rgb Kd" [0.024, 0.529, 0.024]
+	MakeNamedMaterial "WallPurple" "string type" ["matte"] "rgb Kd" [0.549, 0.345, 0.882]
+	MakeNamedMaterial "Box" "string type" ["matte"] "rgb Kd" [0.882, 0.561, 0.341]
+
+	NamedMaterial "WallWhite"
+	Shape "plymesh" "string filename" "../meshes/WallFloor.ply"
+	Shape "plymesh" "string filename" "../meshes/WallBack.ply"
+	Shape "plymesh" "string filename" "../meshes/WallCeiling.ply"
+	
+	NamedMaterial "WallRed"
+	Shape "plymesh" "string filename" "../meshes/WallLeft.ply"
+
+	NamedMaterial "WallGreen"
+	Shape "plymesh" "string filename" "../meshes/WallRight.ply"
+ 
+	NamedMaterial "WallPurple"
+	Shape "plymesh" "string filename" "../meshes/WallHorizontal.ply"
+	Shape "plymesh" "string filename" "../meshes/WallVertical.ply"
+
+	NamedMaterial "Box"
+	Shape "plymesh" "string filename" "../meshes/BoxBig.ply"
+	Shape "plymesh" "string filename" "../meshes/BoxMedium.ply"
+	Shape "plymesh" "string filename" "../meshes/BoxSmall.ply"
+
+WorldEnd

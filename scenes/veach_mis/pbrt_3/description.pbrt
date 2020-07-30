@@ -1,0 +1,62 @@
+WorldBegin
+	MakeNamedMaterial "Light" "string type" ["matte"] "rgb Kd" [0 0 0]
+	
+	AttributeBegin
+		AreaLightSource "diffuse" "rgb L" [901.83, 901.83, 901.83]
+		NamedMaterial "Light"
+
+		Translate -37.5 -18.277 58.643
+		Scale 0.333 0.333 0.333
+		Shape "plymesh" "string filename" "../meshes/UnitSphere.ply"
+	AttributeEnd
+	
+	AttributeBegin
+		AreaLightSource "diffuse" "rgb L" [100, 100, 100]
+		NamedMaterial "Light"
+
+		Translate -12.5 -18.277 58.643
+		Scale 1 1 1
+		Shape "plymesh" "string filename" "../meshes/UnitSphere.ply"
+	AttributeEnd
+	
+	AttributeBegin
+		AreaLightSource "diffuse" "rgb L" [11.111, 11.111, 11.111]
+		NamedMaterial "Light"
+		
+		Translate 12.5 -18.277 58.643
+		Scale 3 3 3
+		Shape "plymesh" "string filename" "../meshes/UnitSphere.ply"
+	AttributeEnd
+	
+	AttributeBegin
+		AreaLightSource "diffuse" "rgb L" [1.235, 1.235, 1.235]
+		NamedMaterial "Light"
+
+		Translate 37.5 -18.277 58.643
+		Scale 9 9 9
+		Shape "plymesh" "string filename" "../meshes/UnitSphere.ply"
+	AttributeEnd
+
+	MakeNamedMaterial "WallWhite" "string type" ["matte"] "rgb Kd" [1, 1, 1]
+
+	MakeNamedMaterial "Smooth" "string type" ["metal"] "rgb eta" [0.200438 0.924033 1.102212] "rgb k" [3.912949 2.452848 2.142188] "bool remaproughness" ["false"] "float uroughness" [0.01] "float vroughness" [0.01]
+	MakeNamedMaterial "Glossy" "string type" ["metal"] "rgb eta" [0.200438 0.924033 1.102212] "rgb k" [3.912949 2.452848 2.142188] "bool remaproughness" ["false"] "float uroughness" [0.025] "float vroughness" [0.025]
+	MakeNamedMaterial "Rough" "string type" ["metal"] "rgb eta" [0.200438 0.924033 1.102212] "rgb k" [3.912949 2.452848 2.142188] "bool remaproughness" ["false"] "float uroughness" [0.0625] "float vroughness" [0.0625]
+	MakeNamedMaterial "SuperRough" "string type" ["metal"] "rgb eta" [0.200438 0.924033 1.102212] "rgb k" [3.912949 2.452848 2.142188] "bool remaproughness" ["false"] "float uroughness" [0.125] "float vroughness" [0.125]
+
+	NamedMaterial "WallWhite"
+	Shape "plymesh" "string filename" "../meshes/Wall.ply"
+	Shape "plymesh" "string filename" "../meshes/Floor.ply"
+
+	NamedMaterial "Smooth"
+	Shape "plymesh" "string filename" "../meshes/Plane1.ply"	
+	
+	NamedMaterial "Glossy"
+	Shape "plymesh" "string filename" "../meshes/Plane2.ply"
+	
+	NamedMaterial "Rough"
+	Shape "plymesh" "string filename" "../meshes/Plane3.ply"
+	
+	NamedMaterial "SuperRough"
+	Shape "plymesh" "string filename" "../meshes/Plane4.ply"
+WorldEnd

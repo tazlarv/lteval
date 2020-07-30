@@ -1,0 +1,12 @@
+# Switch to right-handed system (for: xy - plane, z - up)
+Scale -1 1 1
+LookAt 0 -330 50    # eye
+       0  0   50	# look at point
+       0  0   1     # up vector
+
+Camera "perspective" "float fov" [20]
+Film "image" "integer xresolution" [512] "integer yresolution" [512]
+
+Integrator "path" "integer maxdepth" [9]
+Sampler "random" "integer pixelsamples" [32]
+PixelFilter "box"

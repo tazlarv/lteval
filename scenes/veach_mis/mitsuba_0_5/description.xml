@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene version="0.5.0">
+	<bsdf type="twosided" id="Light">
+		<bsdf type="diffuse">
+			<rgb name="reflectance" value="0, 0, 0"/>
+		</bsdf>
+	</bsdf>
+	
+	<shape type="ply">
+		<string name="filename" value="../meshes/UnitSphere.ply"/>
+		<transform name="toWorld">
+			<scale value="0.333"/>
+			<translate x="-37.5" y="-18.277" z="58.643"/>
+		</transform>
+		<ref id="Light"/>
+		<emitter type="area">
+			<rgb name="radiance" value="901.83"/>
+		</emitter>
+	</shape>
+	<shape type="ply">
+		<string name="filename" value="../meshes/UnitSphere.ply"/>
+		<transform name="toWorld">
+			<scale value="1"/>
+			<translate x="-12.5" y="-18.277" z="58.643"/>
+		</transform>
+		<ref id="Light"/>
+		<emitter type="area">
+			<rgb name="radiance" value="100"/>
+		</emitter>
+	</shape>
+	<shape type="ply">
+		<string name="filename" value="../meshes/UnitSphere.ply"/>
+		<transform name="toWorld">
+			<scale value="3"/>
+			<translate x="12.5" y="-18.277" z="58.643"/>
+		</transform>
+		<ref id="Light"/>
+		<emitter type="area">
+			<rgb name="radiance" value="11.111"/>
+		</emitter>
+	</shape>
+	<shape type="ply">
+		<string name="filename" value="../meshes/UnitSphere.ply"/>
+		<transform name="toWorld">
+			<scale value="9"/>
+			<translate x="37.5" y="-18.277" z="58.643"/>
+		</transform>
+		<ref id="Light"/>
+		<emitter type="area">
+			<rgb name="radiance" value="1.235"/>
+		</emitter>
+	</shape>
+
+	<bsdf type="diffuse" id="WallWhite">
+		<rgb name="reflectance" value="1, 1, 1"/>
+	</bsdf>
+
+	<shape type="ply">
+		<string name="filename" value="../meshes/Floor.ply"/>
+		<ref id="WallWhite"/>
+	</shape>
+	<shape type="ply">
+		<string name="filename" value="../meshes/Wall.ply"/>
+		<ref id="WallWhite"/>
+	</shape>
+
+	<shape type="ply">
+		<string name="filename" value="../meshes/Plane1.ply"/>
+		<bsdf type="roughconductor">
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.01"/>
+			<rgb name="eta" value="0.200438 0.924033 1.102212"/>
+			<rgb name="k" value="3.912949 2.452848 2.142188"/>
+			<float name="extEta" value="1.0"/>
+		</bsdf>
+	</shape>
+	<shape type="ply">
+		<string name="filename" value="../meshes/Plane2.ply"/>
+		<bsdf type="roughconductor">
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.025"/>
+			<rgb name="eta" value="0.200438 0.924033 1.102212"/>
+			<rgb name="k" value="3.912949 2.452848 2.142188"/>
+			<float name="extEta" value="1.0"/>
+		</bsdf>
+	</shape>
+	<shape type="ply">
+		<string name="filename" value="../meshes/Plane3.ply"/>
+		<bsdf type="roughconductor">
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.0625"/>
+			<rgb name="eta" value="0.200438 0.924033 1.102212"/>
+			<rgb name="k" value="3.912949 2.452848 2.142188"/>
+			<float name="extEta" value="1.0"/>
+		</bsdf>
+	</shape>
+	<shape type="ply">
+		<string name="filename" value="../meshes/Plane4.ply"/>
+		<bsdf type="roughconductor">
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.125"/>
+			<rgb name="eta" value="0.200438 0.924033 1.102212"/>
+			<rgb name="k" value="3.912949 2.452848 2.142188"/>
+			<float name="extEta" value="1.0"/>
+		</bsdf>
+	</shape>
+</scene>

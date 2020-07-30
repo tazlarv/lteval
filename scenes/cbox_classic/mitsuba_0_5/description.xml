@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene version="0.5.0">
+	<bsdf type="twosided" id="Light">
+		<bsdf type="diffuse">
+			<rgb name="reflectance" value="0, 0, 0"/>
+		</bsdf>
+	</bsdf>
+	<shape type="ply">
+		<string name="filename" value="../meshes/AreaLight.ply"/>
+		<ref id="Light"/>
+		<emitter type="area">
+			<rgb name="radiance" value="30"/>
+		</emitter>
+	</shape>
+
+	<bsdf type="diffuse" id="WallWhite">
+		<rgb name="reflectance" value="1, 1, 1"/>
+	</bsdf>
+	<bsdf type="diffuse" id="WallRed">
+		<rgb name="reflectance" value="0.529, 0.024, 0.024"/>
+	</bsdf>
+	<bsdf type="diffuse" id="WallGreen">
+		<rgb name="reflectance" value="0.024, 0.529, 0.024"/>
+	</bsdf>
+	<bsdf type="diffuse" id="Box">
+		<rgb name="reflectance" value="0.882, 0.776, 0.341"/>
+	</bsdf>
+	<shape type="ply">
+		<string name="filename" value="../meshes/WallFloor.ply"/>
+		<ref id="WallWhite"/>
+	</shape>
+	<shape type="ply">
+		<string name="filename" value="../meshes/WallBack.ply"/>
+		<ref id="WallWhite"/>
+	</shape>
+	<shape type="ply">
+		<string name="filename" value="../meshes/WallCeiling.ply"/>
+		<ref id="WallWhite"/>
+	</shape>
+	<shape type="ply">
+		<string name="filename" value="../meshes/WallLeft.ply"/>
+		<ref id="WallRed"/>
+	</shape>
+	<shape type="ply">
+		<string name="filename" value="../meshes/WallRight.ply"/>
+		<ref id="WallGreen"/>
+	</shape>
+	<shape type="ply">
+		<string name="filename" value="../meshes/BoxSmall.ply"/>
+		<ref id="Box"/>
+	</shape>
+	<shape type="ply">
+		<string name="filename" value="../meshes/BoxTall.ply"/>
+		<ref id="Box"/>
+	</shape>
+</scene>

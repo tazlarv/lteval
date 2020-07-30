@@ -1,0 +1,28 @@
+WorldBegin
+	MakeNamedMaterial "Light" "string type" ["matte"] "rgb Kd" [0 0 0]
+	AttributeBegin
+		AreaLightSource "diffuse" "rgb L" [10000, 10000, 10000]
+		NamedMaterial "Light"
+		Shape "plymesh" "string filename" "../meshes/AreaLight.ply"
+	AttributeEnd
+
+	MakeNamedMaterial "WallWhite" "string type" ["matte"] "rgb Kd" [0.8, 0.8, 0.8]
+	MakeNamedMaterial "WallRed" "string type" ["matte"] "rgb Kd" [0.529, 0.024, 0.024]
+	MakeNamedMaterial "WallGreen" "string type" ["matte"] "rgb Kd" [0.024, 0.529, 0.024]
+	MakeNamedMaterial "WaterSurface" "string type" ["glass"] "rgb Kr" [1, 1, 1] "rgb Kt" [1, 1, 1] "float eta" [1.8] "bool remaproughness" ["false"]
+
+	NamedMaterial "WallWhite"
+	Shape "plymesh" "string filename" "../meshes/WallFloor.ply"
+	Shape "plymesh" "string filename" "../meshes/WallBack.ply"
+	Shape "plymesh" "string filename" "../meshes/WallCeiling.ply"
+	
+	NamedMaterial "WallRed"
+	Shape "plymesh" "string filename" "../meshes/WallLeft.ply"
+
+	NamedMaterial "WallGreen"
+	Shape "plymesh" "string filename" "../meshes/WallRight.ply"
+
+	NamedMaterial "WaterSurface"
+	Shape "plymesh" "string filename" "../meshes/WaterSurface.ply"
+ 
+WorldEnd
