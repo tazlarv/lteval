@@ -4,5 +4,3 @@ Photorealistic rendering has a wide variety of applications, and so there are ma
 See "A Methodical Approach to the Evaluation of Light Transport Computations.pdf" for detailed documentation.
 
 See configurations folder for examples of input files of the `lteval.py` script.
-
-Current version of the evaluation framework is available at https://github.com/tazlarv/lteval.
